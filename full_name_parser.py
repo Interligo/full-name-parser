@@ -38,14 +38,14 @@ class FullNameParser:
         data_to_analyze = self.parse_html_to_get_required_tag()
 
         if not data_to_analyze:
-            print('Упс! Кажется, мы нашли что-то слишком сложное :(')
+            print('Необходимые теги не обнаружены.')
 
         for data in data_to_analyze:
             data = str(data)
 
             cleaned_data = data[21:len(data) - 4]
             if cleaned_data == ' ':
-                cleaned_data = 'Пусто'
+                cleaned_data = 'Не_указано'
 
             cleaned_data_list = cleaned_data.split()
             if len(cleaned_data_list) >= 4:
@@ -56,7 +56,7 @@ class FullNameParser:
             elif len(cleaned_data_list) == 2:
                 print(f'Ура! Мы нашли фамилию: {cleaned_data_list[0]}, имя: {cleaned_data_list[1]}!')
             elif len(cleaned_data_list) == 1:
-                print(f'Ура! Мы нашли фамилию: {cleaned_data_list[0]}!')
+                print(f'Ура! Мы нашли имя: {cleaned_data_list[0]}!')
             else:
                 print('Упс! Кажется, мы нашли что-то слишком сложное :(')
 
