@@ -56,7 +56,7 @@ class FullNameParser:
             elif len(cleaned_data_list) == 2:
                 print(f'Ура! Мы нашли фамилию: {cleaned_data_list[0]}, имя: {cleaned_data_list[1]}!')
             elif len(cleaned_data_list) == 1:
-                print(f'Ура! Мы нашли имя: {cleaned_data_list[0]}!')
+                print(f'Ура! Мы нашли фамилию: {cleaned_data_list[0]}!')
             else:
                 print('Упс! Кажется, мы нашли что-то слишком сложное :(')
 
